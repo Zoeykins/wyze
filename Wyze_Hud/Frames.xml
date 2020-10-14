@@ -1,0 +1,343 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+
+	<Script file="main.lua"/>
+
+	<!-- Here the Scripts that have to be Executed -->
+	<Frame name="Frames_GeneralScripts" hidden="true">
+		<Scripts>
+			<OnLoad>Frames_OnLoad(); </OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ZP1" frameStrata="HIGH" movable="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="360" y="90"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parent_Background" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/border/P_MainFrame.tga">
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<StatusBar name="$parent_HP" orientation="HORIZONTAL" frameStrata="LOW">
+				<Size>
+					<AbsDimension x="142" y="18"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="106" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<BarTexture name="$parentTexture" file="Interface/Addons/WyzeUI_Hud/statusbar/P_Bar.tga"/>
+				<BarColor r="0.0" g="1.0" b="0.0" a="0.8"/>
+				<Scripts>
+					<OnLoad>Frames_registerHP(ZP1_HP, 'Player')</OnLoad>
+				</Scripts>
+			</StatusBar>
+
+			<StatusBar name="$parent_Power" orientation="HORIZONTAL" frameStrata="LOW">
+				<Size>
+					<AbsDimension x="142" y="18"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-106" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<BarTexture name="$parentTexture" file="Interface/Addons/WyzeUI_Hud/statusbar/P_Bar_Reversed.tga"/>
+				<BarColor r="1.0" g="0.0" b="0.0" a="0.8"/>
+				<Scripts>
+					<OnLoad>Frames_registerResource(ZP1_Power, 'Player')</OnLoad>
+				</Scripts>
+			</StatusBar>
+
+			<Frame name="$parent_SP" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="-85" y="-20" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<Frame name="$parent_BCombo1" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT"/>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_Combo1" hidden="true">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT"/>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_BCombo2" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-25" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_Combo2" hidden="true">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-25" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_BCombo3" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-50" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_Combo3" hidden="true">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-50" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_BCombo4" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-75" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_Combo4" hidden="true">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-75" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_BCombo5" hidden="false">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-100" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_Combo5" hidden="true">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-100" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_BCombo6" hidden="true">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-125" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+					<Frame name="$parent_Combo6" hidden="true">
+						<Size>
+							<AbsDimension x="20" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="RIGHT">
+								<Offset>
+									<AbsDimension x="-125" y="0" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								</Texture>
+							</Layer>
+						</Layers>
+					</Frame>
+
+				</Frames>
+				<Scripts>
+					<OnLoad>Frames_SPower(ZP1_SP, 'Player')</OnLoad>
+				</Scripts>
+			</Frame>
+
+			<Button name="$parent_Portrait" hidden="false" inherits="SecureUnitButtonTemplate">
+				<Size>
+					<AbsDimension x="60" y="60"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parent_Background" setAllPoints="true">
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>Frames_registerUnit(ZP1_Portrait, 'Player'); SetPortraitTexture(ZP1_Portrait_Background, "player")</OnLoad>
+				</Scripts>
+			</Button >
+
+			<Frame name="$parent_Drag" hidden="true">
+				<Size>
+					<AbsDimension x="20" y="10"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parent_Background" setAllPoints="true">
+							<!-- Texture has red color wit 50% alpha -->
+							<Color r="0.3" g="0.3" b="0.3" a="0.5" />
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnMouseDown> Frames_Move(ZP1);  </OnMouseDown>
+					<OnMouseUp>  Frames_Stop(ZP1); </OnMouseUp>
+					<OnDragStop> Frames_Stop(ZP1); </OnDragStop>
+				</Scripts>
+			</Frame>
+
+		</Frames>
+	</Frame>
+</Ui> 
