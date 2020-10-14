@@ -19,7 +19,7 @@
 		</Anchors>
 		<Layers>
 			<Layer level="ARTWORK">
-				<Texture name="$parent_Background" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/border/P_MainFrame.tga">
+				<Texture name="$parent_Background" setAllPoints="true" file="Interface/Addons/Wyze_Hud/border/P_MainFrame.tga">
 				</Texture>
 			</Layer>
 		</Layers>
@@ -35,7 +35,7 @@
 						</Offset>
 					</Anchor>
 				</Anchors>
-				<BarTexture name="$parentTexture" file="Interface/Addons/WyzeUI_Hud/statusbar/P_Bar.tga"/>
+				<BarTexture name="$parentTexture" file="Interface/Addons/Wyze_Hud/statusbar/P_Bar.tga"/>
 				<BarColor r="0.0" g="1.0" b="0.0" a="0.8"/>
 				<Scripts>
 					<OnLoad>Frames_registerHP(ZP1_HP, 'Player')</OnLoad>
@@ -53,7 +53,7 @@
 						</Offset>
 					</Anchor>
 				</Anchors>
-				<BarTexture name="$parentTexture" file="Interface/Addons/WyzeUI_Hud/statusbar/P_Bar_Reversed.tga"/>
+				<BarTexture name="$parentTexture" file="Interface/Addons/Wyze_Hud/statusbar/P_Bar_Reversed.tga"/>
 				<BarColor r="1.0" g="0.0" b="0.0" a="0.8"/>
 				<Scripts>
 					<OnLoad>Frames_registerResource(ZP1_Power, 'Player')</OnLoad>
@@ -81,7 +81,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/Border/P_CPDotFrame.tga" hidden="false">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -96,7 +96,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/statusbar/P_CPDot.tga">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -115,7 +115,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/Border/P_CPDotFrame.tga" hidden="false">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -134,7 +134,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/statusbar/P_CPDot.tga">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -153,7 +153,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/Border/P_CPDotFrame.tga" hidden="false">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -172,7 +172,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/statusbar/P_CPDot.tga">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -191,7 +191,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/Border/P_CPDotFrame.tga" hidden="false">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -210,7 +210,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/statusbar/P_CPDot.tga">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -229,7 +229,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/Border/P_CPDotFrame.tga" hidden="false">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -248,7 +248,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/statusbar/P_CPDot.tga">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -267,7 +267,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/Border/P_CPDotFrame.tga" hidden="false">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/Border/P_CPDotFrame.tga" hidden="false">
 								</Texture>
 							</Layer>
 						</Layers>
@@ -286,7 +286,7 @@
 						</Anchors>
 						<Layers>
 							<Layer level="ARTWORK">
-								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/WyzeUI_Hud/statusbar/P_CPDot.tga">
+								<Texture name="$parent_D1" setAllPoints="true" file="Interface/Addons/Wyze_Hud/statusbar/P_CPDot.tga">
 								</Texture>
 							</Layer>
 						</Layers>
