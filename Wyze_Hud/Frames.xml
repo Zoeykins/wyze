@@ -3,11 +3,187 @@
 
 	<Script file="main.lua"/>
 
+	<Font name="wyzeFont" font="Interface/Addons/Wyze_Hud/assets/fonts/ContinuumMedium.ttf" virtual="true">
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+
 	<!-- Here the Scripts that have to be Executed -->
 	<Frame name="Frames_GeneralScripts" hidden="true">
 		<Scripts>
 			<OnLoad>Frames_OnLoad(); </OnLoad>
 		</Scripts>
+	</Frame>
+
+	<Frame name="WTarget" frameStrata="High" movable="true" enableMouse="true" hidden="true">
+		<Size>
+			<AbsDimension x="360" y="90"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOP"/>
+		</Anchors>
+		<Scripts>
+			<OnLoad>Target_register(WTarget)</OnLoad>
+		</Scripts>
+		<Frames>
+			<Button name="$parentBG" frameStrata="High" inherits="SecureUnitButtonTemplate">
+				<Size>
+					<AbsDimension x="360" y="90"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture setAllPoints="true" file="Interface/Addons/Wyze_Hud/border/T_MainFrame.tga">
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>Target_registerClickarea(WTargetBG);</OnLoad>
+				</Scripts>
+			</Button>
+
+			<StatusBar name="$parentHP" orientation="HORIZONTAL" frameStrata="LOW">
+				<Size>
+					<AbsDimension x="360" y="45"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="-22" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<BarTexture name="$parentTexture" file="Interface/Addons/Wyze_Hud/statusbar/T_Healthbar.tga"/>
+				<BarColor r="1.0" g="0.0" b="0.0" a="0.8"/>
+			</StatusBar>
+
+			<Frame name="$parentName" frameStrata="MEDIUM">
+				<Size x="180" y="20"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="15" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Frame name="$parentIconElite" frameStrata="MEDIUM">
+				<Size x="420" y="40"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="10" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentLeft" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_EliteIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="LEFT"/>
+							</Anchors>
+							<TexCoords left="1" right="0" top="0" bottom="1" />
+						</Texture>
+						<Texture name="$parentRight" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_EliteIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="RIGHT"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="$parentIconRareElite" frameStrata="MEDIUM">
+				<Size x="420" y="40"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="10" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentLeft" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_RareEliteIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="LEFT"/>
+							</Anchors>
+							<TexCoords left="1" right="0" top="0" bottom="1" />
+						</Texture>
+						<Texture name="$parentRight" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_RareEliteIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="RIGHT"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="$parentIconRare" frameStrata="MEDIUM">
+				<Size x="420" y="40"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="10" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentLeft" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_RareIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="LEFT"/>
+							</Anchors>
+							<TexCoords left="1" right="0" top="0" bottom="1" />
+						</Texture>
+						<Texture name="$parentRight" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_RareIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="RIGHT"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+
+			<Frame name="$parentIconWorldBoss" frameStrata="MEDIUM">
+				<Size x="420" y="40"/>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="10" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentLeft" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_BossIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="LEFT"/>
+							</Anchors>
+							<TexCoords left="1" right="0" top="0" bottom="1" />
+						</Texture>
+						<Texture name="$parentRight" setAllPoints="true" file="Interface/Addons/Wyze_Hud/assets/img/icons/T_BossIcon.tga">
+							<Size x="40" y="40"/>
+							<Anchors>
+								<Anchor point="RIGHT"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+
+		</Frames>
 	</Frame>
 
 	<Frame name="ZP1" frameStrata="HIGH" movable="true" enableMouse="true">
@@ -16,6 +192,9 @@
 		</Size>
 		<Anchors>
 			<Anchor point="CENTER"/>
+			<Offset>
+				<AbsDimension x="0" y="-200" />
+			</Offset>
 		</Anchors>
 		<Layers>
 			<Layer level="ARTWORK">

@@ -1,10 +1,11 @@
 ## Interface: 90001
-## Title: Console Port |cff69ccf0HUD|r
+## Title: Wyze |cff69ccf0HUD|r
 ## Notes: HUD created by Zoey and Werner Botha (No relation :)
 ## SavedVariables: WyzeUI_Hud
 ## SavedVariablesPerCharacter: WyzeUI_HudChar
 
 functions.lua
 frames.lua
+units/target.lua
 Frames.xml
 main.lua

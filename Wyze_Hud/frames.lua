@@ -17,10 +17,8 @@ function Frames_unlock(unlock)
     local frame = getglobal("ZP1_Drag")
     if (unlock == true) then
         frame:Show()
-        Z_log("Unlocking frames")
     else
         frame:Hide()
-        Z_log("Locking frames")
     end
 end
 
@@ -170,7 +168,6 @@ function Frames_SPower(frame, unit)
 end
 
 function Frames_registerUnit(frame, unit)
-    Z_log("registering unit")
     frame:SetAttribute("unit", unit)
     frame:SetAttribute("type", "target")
     frame:EnableMouse(true)
@@ -192,12 +189,7 @@ function Frames_registerUnit(frame, unit)
         function(self, button)
             if button == "RightButton" then
                 if unit == "Player" then
-                    ToggleDropDownMenu(1, nil, PlayerFrameDropDown, TargetFrame, 0, 0)
-                    if PLAYER_FRAME_UNLOCKED then
-                        Z_log("Movable")
-                    else
-                        Z_log("Stuck")
-                    end
+                    ToggleDropDownMenu(1, nil, PlayerFrameDropDown, frame, 0, 0)
                 end
             end
         end
@@ -213,7 +205,6 @@ frame:SetScript(
     "OnEvent",
     function(self, event, arg1)
         if event == "ADDON_LOADED" and arg1 == "WyzeUI_Hud" then
-            Z_log("addon load")
             if WyzeUI_Hud == nill then
                 WyzeUI_Hud = {}
                 WyzeUI_Hud.x = 0
