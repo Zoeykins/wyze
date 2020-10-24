@@ -1,6 +1,6 @@
 ## Interface: 90001
 ## Title: Wyze |cff69ccf0HUD|r
-## Notes: HUD created by Zoey and Werner Botha (No relation :)
+## Notes: HUD created by Kay and Avo
 ## SavedVariables: WyzeUI_Hud
 ## SavedVariablesPerCharacter: WyzeUI_HudChar
 
